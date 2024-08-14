@@ -94,10 +94,17 @@ for linha in pagina_clientes.iter_rows(min_row=2):
     if nome is None or telefone is None:
         continue
 
-    for mensagem in mensagens: 
+    primeira_mensagem = f"Olá, {nome}\n\n{mensagens[0]}"
+
+    for i, mensagem in enumerate(mensagens): 
+
+        if i == 0:
+            mensagem_atual = primeira_mensagem
+        else:
+            mensagem_atual = mensagem
 
         try:
-            link_mensagem_whats = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem)}'
+            link_mensagem_whats = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem_atual)}'
             navegador.get(link_mensagem_whats)
 
             while len(navegador.find_elements(by='id', value='side')) < 1:
@@ -114,10 +121,6 @@ for linha in pagina_clientes.iter_rows(min_row=2):
                 cell.fill = green_fill
 
         except Exception as e:
-            messagebox.showwarning(f'Não foi possível enviar mensagem para {nome} ({telefone})')
-            with open('erros.csv', 'a', newline='', encoding='utf-8') as arquivo:
-                arquivo.write(f'{nome},{telefone},{traceback.format_exc()}\n')
-
             messagebox.showerror('Erro', f'Não foi possível enviar mensagem para {nome}, ({telefone}). Detalhes do erro foram registrados.')
 
             for cell in linha:

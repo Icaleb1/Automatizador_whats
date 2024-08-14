@@ -220,3 +220,40 @@ Stacktrace:
 	RtlUserThreadStart [0x00007FFFFC2EAF28+40]
 
 
+Emanuel,4899999999999,Traceback (most recent call last):
+  File "c:\Users\caleb.oliveira\Documents\Automatizador_whats\app.py", line 106, in <module>
+    navegador.find_element(by='xpath', value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caleb.oliveira\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 748, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caleb.oliveira\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\caleb.oliveira\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p"}
+  (Session info: chrome=127.0.6533.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D7A29642+30946]
+	(No symbol) [0x00007FF6D79DE3D9]
+	(No symbol) [0x00007FF6D78D6FDA]
+	(No symbol) [0x00007FF6D792822C]
+	(No symbol) [0x00007FF6D792850C]
+	(No symbol) [0x00007FF6D796DCB7]
+	(No symbol) [0x00007FF6D794CAAF]
+	(No symbol) [0x00007FF6D796B041]
+	(No symbol) [0x00007FF6D794C813]
+	(No symbol) [0x00007FF6D791A6E5]
+	(No symbol) [0x00007FF6D791B021]
+	GetHandleVerifier [0x00007FF6D7B5F84D+1301229]
+	GetHandleVerifier [0x00007FF6D7B6BDC7+1351783]
+	GetHandleVerifier [0x00007FF6D7B62A13+1313971]
+	GetHandleVerifier [0x00007FF6D7A5DD16+245686]
+	(No symbol) [0x00007FF6D79E759F]
+	(No symbol) [0x00007FF6D79E3814]
+	(No symbol) [0x00007FF6D79E39A2]
+	(No symbol) [0x00007FF6D79DA3FF]
+	BaseThreadInitThunk [0x00007FFCC71F7614+20]
+	RtlUserThreadStart [0x00007FFCC86426A1+33]
+
+
