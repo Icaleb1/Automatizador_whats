@@ -11,6 +11,7 @@ assimilar a EVO para enviar as mensagens automaticamente para os clientes
 
 import pandas as pd
 import openpyxl
+from openpyxl.styles import PatternFill
 from urllib.parse import quote
 import webbrowser
 from time import sleep
@@ -21,6 +22,7 @@ import os
 import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import traceback
 
 
 
@@ -78,6 +80,9 @@ while len(navegador.find_elements(by='id', value='side')) < 1:
 workbook = openpyxl.load_workbook(file_path)
 pagina_clientes = workbook['Planilha1']
 
+green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
+red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
+
 for linha in pagina_clientes.iter_rows(min_row=2):
     matricula = linha[0].value  
     nome = linha[1].value
@@ -105,9 +110,19 @@ for linha in pagina_clientes.iter_rows(min_row=2):
 
             sleep(10)
 
-        except:
-            print(f'Não foi possível enviar mensagem para {nome}')
+            for cell in linha:
+                cell.fill = green_fill
+
+        except Exception as e:
+            messagebox.showwarning(f'Não foi possível enviar mensagem para {nome} ({telefone})')
             with open('erros.csv', 'a', newline='', encoding='utf-8') as arquivo:
-                arquivo.write(f'{nome},{telefone}')
+                arquivo.write(f'{nome},{telefone},{traceback.format_exc()}\n')
+
+            messagebox.showerror('Erro', f'Não foi possível enviar mensagem para {nome}, ({telefone}). Detalhes do erro foram registrados.')
+
+            for cell in linha:
+                cell.fill = red_fill
+
+workbook.save(file_path)
 
 messagebox.showinfo('Concluído', 'Mensagens enviadas.')
