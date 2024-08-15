@@ -1,4 +1,4 @@
-('C:\\Users\\Caleb\\Documents\\AnaliseDados\\AulasPython\\BotWhats\\build\\app\\PYZ-00.pyz',
+('C:\\Users\\Caleb\\git\\Automatizador_whats\\build\\app\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\Caleb\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),
