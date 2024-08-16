@@ -12,6 +12,9 @@ import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import traceback
+import verificacaoVersao
+
+verificacaoVersao.verificarAtualizações()
 
 root = tk.Tk()
 root.withdraw()
