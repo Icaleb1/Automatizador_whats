@@ -18,7 +18,7 @@ def verificarAtualizações():
     else:
         print(f'Você já está usando a versão mais recente.')
 
-    def baixaNovaVersao(executavel):
+    def baixarNovaVersao(executavel):
         resposta = requests.get(executavel)
         with open('app.exe', 'wb') as arquivo:
             arquivo.write(resposta.content)
