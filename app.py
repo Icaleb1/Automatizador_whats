@@ -14,7 +14,7 @@ from selenium.webdriver.common.keys import Keys
 import traceback
 import verificacaoVersao
 
-verificacaoVersao.verificarAtualizações()
+#verificacaoVersao.verificarAtualizacoes()
 
 root = tk.Tk()
 root.withdraw()
