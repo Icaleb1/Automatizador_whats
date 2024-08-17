@@ -49,3 +49,29 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFFFB4C257D+29]
 	RtlUserThreadStart [0x00007FFFFC2EAF28+40]
 
+Não foi possível enviar mensagem para marcos, (5548991762810). Erro: argument of type 'NoneType' is not iterable
+Não foi possível enviar mensagem para Caleb, (8948495495849440). Erro: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF684969642+30946]
+	(No symbol) [0x00007FF68491E3D9]
+	(No symbol) [0x00007FF684816FDA]
+	(No symbol) [0x00007FF68486822C]
+	(No symbol) [0x00007FF68486850C]
+	(No symbol) [0x00007FF6848ADCB7]
+	(No symbol) [0x00007FF68488CAAF]
+	(No symbol) [0x00007FF6848AB041]
+	(No symbol) [0x00007FF68488C813]
+	(No symbol) [0x00007FF68485A6E5]
+	(No symbol) [0x00007FF68485B021]
+	GetHandleVerifier [0x00007FF684A9F84D+1301229]
+	GetHandleVerifier [0x00007FF684AABDC7+1351783]
+	GetHandleVerifier [0x00007FF684AA2A13+1313971]
+	GetHandleVerifier [0x00007FF68499DD16+245686]
+	(No symbol) [0x00007FF68492759F]
+	(No symbol) [0x00007FF684923814]
+	(No symbol) [0x00007FF6849239A2]
+	(No symbol) [0x00007FF68491A3FF]
+	BaseThreadInitThunk [0x00007FFFFB4C257D+29]
+	RtlUserThreadStart [0x00007FFFFC2EAF28+40]
+
+Não foi possível enviar mensagem para Arthur, (5548991762810). Erro: argument of type 'NoneType' is not iterable

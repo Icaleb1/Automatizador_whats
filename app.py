@@ -12,7 +12,14 @@ import sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import traceback
-import verificacaoVersao
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.expected_conditions import presence_of_element_located, visibility_of_element_located
+from selenium.webdriver.support.expected_conditions import text_to_be_present_in_element_value
+
+
+
 
 #verificacaoVersao.verificarAtualizacoes()
 
@@ -90,16 +97,19 @@ def enviarMensagens(navegador, mensagens, paginaClientes):
                 linkMensagemWhats = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagemAtual)}'
                 navegador.get(linkMensagemWhats)
 
-                while len(navegador.find_elements(by='id', value='side')) < 1:
-                    sleep(10)
+                WebDriverWait(navegador, 30).until(
+                   presence_of_element_located((By.ID, 'side'))
+                )
 
-                navegador.find_element(by='xpath', value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
-                sleep(15)
+                campoMensagem = WebDriverWait(navegador, 30).until(
+                    presence_of_element_located((By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p'))
+                )
+                campoMensagem.send_keys(Keys.ENTER)
 
-                navegador.switch_to.window(navegador.window_handles[0])
-
-                sleep(10)
-
+                WebDriverWait(navegador, 30).until(
+                    text_to_be_present_in_element_value((By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p'), "")
+                )
+            
                 for cell in linha:
                     cell.fill = linhaVerde
 
