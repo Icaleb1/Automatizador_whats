@@ -10,6 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import threading
+from enviaEmail import enviar_email
 
 
 # Configurações iniciais
@@ -119,6 +120,9 @@ def main():
     navegador = inicializar_navegador()
     processar_clientes(navegador, mensagens, file_path)
     messagebox.showinfo('Concluído', 'Mensagens enviadas.')
+    
+    enviar_email('calebfernandes080@gmail.com', 'O envio de mensagens foi concluído', 'corpo' )
+
     navegador.quit()
 
 if __name__ == '__main__':
