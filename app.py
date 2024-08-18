@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 import openpyxl
 from openpyxl.styles import PatternFill
@@ -12,6 +13,12 @@ from time import sleep
 import threading
 from enviaEmail import enviar_email
 
+log_file = 'erros.log'
+logging.basicConfig(
+    filename=log_file,
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # Configurações iniciais
 root = tk.Tk()
@@ -107,6 +114,7 @@ def processar_clientes(navegador, mensagens, file_path):
                     cell.fill = green_fill
 
             except Exception as e:
+                logging.error(f"Erro ao processar cliente {nome} ({telefone}): {e}")
 
                 for cell in linha:
                     cell.fill = red_fill
@@ -121,7 +129,7 @@ def main():
     processar_clientes(navegador, mensagens, file_path)
     messagebox.showinfo('Concluído', 'Mensagens enviadas.')
     
-    enviar_email('calebfernandes080@gmail.com', 'O envio de mensagens foi concluído', 'corpo' )
+    enviar_email('calebfernandes080@gmail.com', 'O envio de mensagens foi concluído', 'corpo', 'erros.log' )
 
     navegador.quit()
 

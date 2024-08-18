@@ -45,4 +45,4 @@ def enviar_email(destinatario, assunto, corpo, anexo=None):
         print(f"Falha ao enviar e-mail para {destinatario}: {e}")
 
 # Teste de envio de e-mail
-enviar_email('calebfernandes080@gmail.com', 'testando o envio de emails', 'corpo', 'erros.csv')
+enviar_email('calebfernandes080@gmail.com', 'testando o envio de emails', 'corpo', 'erros.log')
