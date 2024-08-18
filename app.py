@@ -93,6 +93,11 @@ def processar_clientes(navegador, mensagens, file_path):
     red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
 
     for linha in pagina_clientes.iter_rows(min_row=2):
+
+        if len(linha) < 5:
+            logging.error(f"Linha com dados insuficientes: {linha}")
+            continue
+
         matricula = linha[0].value  
         nome = linha[1].value
         telefone = linha[2].value
