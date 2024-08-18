@@ -20,6 +20,17 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+class EmailHandler(logging.Handler):
+    def emit(self, record):
+        log_entry = self.format(record)
+        enviar_email('calebfernandes080@gmail.com', 'Erro na execução', log_entry, log_file)
+
+email_handler = EmailHandler()
+email_handler.setLevel(logging.ERROR)
+email_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+logging.getLogger().addHandler(email_handler)
+
+
 # Configurações iniciais
 root = tk.Tk()
 root.withdraw()
@@ -122,16 +133,23 @@ def processar_clientes(navegador, mensagens, file_path):
     workbook.save(file_path)
 
 def main():
-    file_path = carregar_arquivo()
-    num_mensagens = obter_num_mensagens()
-    mensagens = obter_mensagens(num_mensagens)
-    navegador = inicializar_navegador()
-    processar_clientes(navegador, mensagens, file_path)
-    messagebox.showinfo('Concluído', 'Mensagens enviadas.')
-    
-    enviar_email('calebfernandes080@gmail.com', 'O envio de mensagens foi concluído', 'corpo', 'erros.log' )
+    try:
+        file_path = carregar_arquivo()
+        num_mensagens = obter_num_mensagens()
+        mensagens = obter_mensagens(num_mensagens)
+        navegador = inicializar_navegador()
+        processar_clientes(navegador, mensagens, file_path)
+        messagebox.showinfo('Concluído', 'Mensagens enviadas.')
+    except Exception as e:
+        logging.error(f"Erro na função principal: {e}")
+    finally:
+        try:
+            navegador.quit()
+        except Exception as e:
+            logging.error(f"Erro ao tentar fechar o navegador: {e}")
+        else:
+            open(log_file, 'w').close()
 
-    navegador.quit()
 
 if __name__ == '__main__':
     main()
