@@ -12,6 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import threading
 from enviaEmail import enviar_email
+import random
 
 log_file = 'erros.log'
 logging.basicConfig(
@@ -82,7 +83,7 @@ def inicializar_navegador():
     navegador = webdriver.Chrome(options=options)
     navegador.get("https://web.whatsapp.com/")
     while len(navegador.find_elements(by='id', value='side')) < 1:
-        sleep(5)
+        sleep(10)
     return navegador
 
 def processar_clientes(navegador, mensagens, file_path):
@@ -91,18 +92,17 @@ def processar_clientes(navegador, mensagens, file_path):
 
     green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
     red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
+    intervaloAleatorio = random.uniform(15, 35)
 
     for linha in pagina_clientes.iter_rows(min_row=2):
 
-        if len(linha) < 5:
+        if len(linha) < 3:
             logging.error(f"Linha com dados insuficientes: {linha}")
             continue
 
         matricula = linha[0].value  
         nome = linha[1].value
         telefone = linha[2].value
-        email = linha[3].value
-        valor_debito = linha[4].value
 
         if nome is None or telefone is None:
             continue
@@ -117,14 +117,14 @@ def processar_clientes(navegador, mensagens, file_path):
                 navegador.get(link_mensagem_whats)
 
                 while len(navegador.find_elements(by='id', value='side')) < 1:
-                    sleep(10)
+                    sleep(intervaloAleatorio)
 
                 navegador.find_element(by='xpath', value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
-                sleep(15)
+                sleep(intervaloAleatorio)
 
                 navegador.switch_to.window(navegador.window_handles[0])
 
-                sleep(10)
+                sleep(intervaloAleatorio)
 
                 for cell in linha:
                     cell.fill = green_fill
