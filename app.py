@@ -13,6 +13,9 @@ from time import sleep
 import threading
 from enviaEmail import enviar_email
 import random
+from verificarVersao import compararVersoes
+
+compararVersoes()
 
 log_file = 'erros.log'
 logging.basicConfig(
