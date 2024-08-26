@@ -57,6 +57,15 @@ def carregar_arquivo():
         sys.exit()
     return file_path
 
+def escolher_pagina(workbook):
+    paginas = workbook.sheetnames
+    pagina_selecionada = simpledialog.askstring('Seleção de Página', f'Selecione a página a ser processada:\n\n{", ".join(paginas)}')
+    if pagina_selecionada not in paginas:
+        messagebox.showerror('Erro', 'Página selecionada não encontrada. Encerrando o programa.')
+        sys.exit()
+    return pagina_selecionada
+
+
 def obter_num_mensagens():
     while True:
         try:
@@ -89,10 +98,7 @@ def inicializar_navegador():
         sleep(10)
     return navegador
 
-def processar_clientes(navegador, mensagens, file_path):
-    workbook = openpyxl.load_workbook(file_path)
-    pagina_clientes = workbook['Planilha1']
-
+def processar_clientes(navegador, mensagens, pagina_clientes):
     green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
     red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
     intervaloAleatorio = random.uniform(15, 35)
@@ -143,10 +149,14 @@ def processar_clientes(navegador, mensagens, file_path):
 def main():
     try:
         file_path = carregar_arquivo()
+        workbook = openpyxl.load_workbook(file_path)
+        pagina_selecionada = escolher_pagina(workbook)
+        pagina_clientes = workbook[pagina_selecionada]
+
         num_mensagens = obter_num_mensagens()
         mensagens = obter_mensagens(num_mensagens)
         navegador = inicializar_navegador()
-        processar_clientes(navegador, mensagens, file_path)
+        processar_clientes(navegador, mensagens, pagina_clientes)
         messagebox.showinfo('Concluído', 'Mensagens enviadas.')
     except Exception as e:
         logging.error(f"Erro na função principal: {e}")
