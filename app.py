@@ -142,7 +142,7 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
                 navegador.find_element(by='xpath', value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
                 sleep(intervaloAleatorio)
 
-                #navegador.switch_to.window(navegador.window_handles[0])
+                navegador.switch_to.window(navegador.window_handles[0])
 
                 sleep(intervaloAleatorio)
 
