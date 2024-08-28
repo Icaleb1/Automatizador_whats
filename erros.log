@@ -1,1 +1,25 @@
-2024-08-25 22:46:45,026 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-08-28 00:39:32,495 - ERROR - Erro ao processar cliente Caleb (8948495495849440): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p"}
+  (Session info: chrome=128.0.6613.85); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF642D8B632+29090]
+	(No symbol) [0x00007FF642CFE6E9]
+	(No symbol) [0x00007FF642BBB1CA]
+	(No symbol) [0x00007FF642C0EFD7]
+	(No symbol) [0x00007FF642C0F22C]
+	(No symbol) [0x00007FF642C597F7]
+	(No symbol) [0x00007FF642C3672F]
+	(No symbol) [0x00007FF642C565D9]
+	(No symbol) [0x00007FF642C36493]
+	(No symbol) [0x00007FF642C009B1]
+	(No symbol) [0x00007FF642C01B11]
+	GetHandleVerifier [0x00007FF6430A881D+3294093]
+	GetHandleVerifier [0x00007FF6430F4403+3604339]
+	GetHandleVerifier [0x00007FF6430EA2C7+3563063]
+	GetHandleVerifier [0x00007FF642E46F16+797318]
+	(No symbol) [0x00007FF642D0986F]
+	(No symbol) [0x00007FF642D05454]
+	(No symbol) [0x00007FF642D055E0]
+	(No symbol) [0x00007FF642CF4A7F]
+	BaseThreadInitThunk [0x00007FF9A037257D+29]
+	RtlUserThreadStart [0x00007FF9A104AF28+40]
+

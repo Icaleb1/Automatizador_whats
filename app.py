@@ -12,6 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import threading
 from enviaEmail import enviar_email
+import difflib
 import random
 from verificarVersao import compararVersoes
 
@@ -59,11 +60,21 @@ def carregar_arquivo():
 
 def escolher_pagina(workbook):
     paginas = workbook.sheetnames
-    pagina_selecionada = simpledialog.askstring('Seleção de Página', f'Selecione a página a ser processada:\n\n{", ".join(paginas)}')
-    if pagina_selecionada not in paginas:
-        messagebox.showerror('Erro', 'Página selecionada não encontrada. Encerrando o programa.')
-        sys.exit()
-    return pagina_selecionada
+    while True:
+        pagina_selecionada = simpledialog.askstring('Seleção de Página', f'Selecione a página a ser processada:\n\n{", ".join(paginas)}')
+        if pagina_selecionada is None:
+            messagebox.showerror('Erro', 'Operação cancelada.')
+            sys.exit()
+
+        # Usando difflib para encontrar a página mais próxima
+        pagina_correspondente = difflib.get_close_matches(pagina_selecionada, paginas, n=1, cutoff=0.5)
+
+        if pagina_correspondente:
+            return pagina_correspondente[0]
+        else:
+            retry = messagebox.askretrycancel('Erro', f'Página "{pagina_selecionada}" não encontrada. Deseja tentar novamente?')
+            if not retry:
+                sys.exit()
 
 
 def obter_num_mensagens():
@@ -98,7 +109,7 @@ def inicializar_navegador():
         sleep(10)
     return navegador
 
-def processar_clientes(navegador, mensagens, pagina_clientes):
+def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_path):
     green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
     red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
     intervaloAleatorio = random.uniform(15, 35)
@@ -131,7 +142,7 @@ def processar_clientes(navegador, mensagens, pagina_clientes):
                 navegador.find_element(by='xpath', value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
                 sleep(intervaloAleatorio)
 
-                navegador.switch_to.window(navegador.window_handles[0])
+                #navegador.switch_to.window(navegador.window_handles[0])
 
                 sleep(intervaloAleatorio)
 
@@ -156,7 +167,7 @@ def main():
         num_mensagens = obter_num_mensagens()
         mensagens = obter_mensagens(num_mensagens)
         navegador = inicializar_navegador()
-        processar_clientes(navegador, mensagens, pagina_clientes)
+        processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_path)
         messagebox.showinfo('Concluído', 'Mensagens enviadas.')
     except Exception as e:
         logging.error(f"Erro na função principal: {e}")
