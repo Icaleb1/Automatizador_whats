@@ -66,7 +66,6 @@ def escolher_pagina(workbook):
             messagebox.showerror('Erro', 'Operação cancelada.')
             sys.exit()
 
-        # Usando difflib para encontrar a página mais próxima
         pagina_correspondente = difflib.get_close_matches(pagina_selecionada, paginas, n=1, cutoff=0.5)
 
         if pagina_correspondente:
@@ -102,6 +101,9 @@ def obter_mensagens(num_mensagens):
 
 def inicializar_navegador():
     options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('start-maximized')
     options.add_argument("user-data-dir=/path/to/your/custom/profile")  # Use o caminho para o perfil do usuário
     navegador = webdriver.Chrome(options=options)
     navegador.get("https://web.whatsapp.com/")
@@ -150,6 +152,10 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
                     cell.fill = green_fill
 
             except Exception as e:
+
+                for cell in linha:
+                    cell.fill = red_fill
+
                 logging.error(f"Erro ao processar cliente {nome} ({telefone}): {e}")
 
                 for cell in linha:
