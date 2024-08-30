@@ -5,7 +5,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('enviaEmail.py', '.'), ('verificarVersao.py', '.'), ('versao.txt', '.'), ('.env', '.'), ('erros.log', '.')],
+    datas=[('enviaEmail.py', '.'), ('verificarVersao.py', '.'), ('versao.txt', '.'), ('.env', '.'), ('erros.log', '.'), ('modulos', 'modulos')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
