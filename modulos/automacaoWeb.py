@@ -1,10 +1,43 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from urllib.parse import quote
 from time import sleep
 import random
 import logging
 from openpyxl.styles import PatternFill
+
+
+def enviar_anexo(navegador, telefone, anexo):
+    intervaloAleatorio = random.uniform(10, 20)
+    try:
+        # Abrir a conversa com o telefone do cliente
+        link_mensagem_whats = f'https://web.whatsapp.com/send?phone={telefone}'
+        navegador.get(link_mensagem_whats)
+
+        # Aguarda a página do WhatsApp carregar
+        while len(navegador.find_elements(By.ID, 'side')) < 1:
+            sleep(intervaloAleatorio)
+
+        # Clicar no ícone de anexar
+        anexar_icone = navegador.find_element(By.XPATH, "//div[@title='Anexar']")
+        anexar_icone.click()
+
+        # Selecionar o input de arquivo e enviar o anexo
+        anexar_documento = navegador.find_element(By.XPATH, "//input[@accept='*']")
+        anexar_documento.send_keys(anexo)
+
+        # Clicar no botão de enviar
+        sleep(intervaloAleatorio)
+        enviar_botao = navegador.find_element(By.XPATH, "//span[@data-icon='send']")
+        enviar_botao.click()
+
+        sleep(intervaloAleatorio)
+        return True
+
+    except Exception as e:
+        logging.error(f"Erro ao enviar anexo para {telefone}: {e}")
+        return False
 
 
 def inicializar_navegador():
@@ -19,7 +52,7 @@ def inicializar_navegador():
         sleep(10)
     return navegador
 
-def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_path):
+def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_path, anexo):
     green_fill = PatternFill(start_color='00FF00', end_color='00FF00', fill_type='solid')
     red_fill = PatternFill(start_color='FF0000', end_color='FF0000', fill_type='solid')
     intervaloAleatorio = random.uniform(15, 35)
@@ -55,6 +88,11 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
                 navegador.switch_to.window(navegador.window_handles[0])
 
                 sleep(intervaloAleatorio)
+
+                if anexo:
+                    envio_anexo_sucesso = enviar_anexo(navegador, telefone, anexo)
+                    if not envio_anexo_sucesso:
+                        raise Exception(f"Falha ao enviar o anexo para o telefone {telefone}")
 
                 for cell in linha:
                     cell.fill = green_fill

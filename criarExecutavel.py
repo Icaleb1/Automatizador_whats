@@ -1,15 +1,17 @@
 import subprocess
+import os
 
 def criar_executavel():
+    sep = ';' if os.name == 'nt' else ':'
     comando = [
         'pyinstaller',
-        '--onefile',
-        '--add-data', 'enviaEmail.py;.',
-        '--add-data', 'verificarVersao.py;.',
-        '--add-data', 'versao.txt;.',
-        '--add-data', '.env;.',
-        '--add-data', 'erros.log;.',
-        '--add-data', 'modulos;modulos',  # Inclui a pasta modulos
+         '--onefile',
+        '--add-data', f'enviaEmail.py{sep}.',
+        '--add-data', f'verificarVersao.py{sep}.',
+        '--add-data', f'versao.txt{sep}.',
+        '--add-data', f'.env{sep}.',
+        '--add-data', f'erros.log{sep}.',
+        '--add-data', f'modulos{sep}modulos',  # Inclui a pasta modulos
         '--noconsole',
         'app.py'
     ]

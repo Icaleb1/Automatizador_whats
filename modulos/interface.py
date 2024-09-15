@@ -8,13 +8,24 @@ root.withdraw()
 
 def carregar_arquivo():
     file_path = filedialog.askopenfilename(
-        title="Selecione o arquivo Excel",
+        title='Selecione o arquivo Excel.',
         filetypes=[("Excel files", "*.xlsx *.xls")]
     )
     if not file_path:
         messagebox.showerror('Error', 'Nenhum arquivo selecionado. Encerrando o programa.')
         sys.exit()
     return file_path
+
+def carregar_anexo():
+    file_path = filedialog.askopenfilename(
+        title='Selecione o anexo.',
+        filetypes=[('Todos os anexos', '*.*'), ('Anexo PDF', '*.pdf'), ('Imagens', '*.png;*.jpg;*.jpeg')]
+    )
+    if not file_path:
+        messagebox.showerror('Error', 'Nenhum anexo selecionado. Encerrando o programa.')
+        sys.exit()
+    return file_path
+
 
 def escolher_pagina(workbook):
     paginas = workbook.sheetnames
