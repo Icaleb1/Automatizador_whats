@@ -14,19 +14,23 @@ def carregar_arquivo():
     if not file_path:
         messagebox.showerror('Error', 'Nenhum arquivo selecionado. Encerrando o programa.')
         sys.exit()
-    return file_path
+    return file_path 
 
 def carregar_anexo():
-    file_path = filedialog.askopenfilename(
-        title='Selecione o anexo.',
-        filetypes=[('Todos os anexos', '*.*'), ('Anexo PDF', '*.pdf'), ('Imagens', '*.png;*.jpg;*.jpeg')]
+    resposta = messagebox.askyesno(
+        'Anexo opcional',
+        'Deseja enviar um anexo?'
     )
-    if not file_path:
-        messagebox.showerror('Error', 'Nenhum anexo selecionado. Encerrando o programa.')
-        sys.exit()
-    return file_path
-
-
+    
+    if resposta:
+        anexo_path = filedialog.askopenfilename(
+            title='Selecione um arquivo para anexar.',
+            filetypes=[("Arquivos", "*.*")]
+        )
+        return anexo_path if anexo_path else None
+    else:
+        return None
+    
 def escolher_pagina(workbook):
     paginas = workbook.sheetnames
     while True:
