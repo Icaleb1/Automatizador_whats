@@ -6,22 +6,31 @@ from time import sleep
 import random
 import logging
 from openpyxl.styles import PatternFill
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def enviar_anexo(navegador, telefone, anexo):
-    intervaloAleatorio = random.uniform(10, 20)
+    intervaloAleatorio = random.uniform(15, 25)
     try:
         # Abrir a conversa com o telefone do cliente
         link_mensagem_whats = f'https://web.whatsapp.com/send?phone={telefone}'
         navegador.get(link_mensagem_whats)
 
         # Aguarda a página do WhatsApp carregar
-        while len(navegador.find_elements(By.ID, 'side')) < 1:
-            sleep(intervaloAleatorio)
-
+        #Funcional!!!
+        WebDriverWait(navegador, 15).until(
+            EC.presence_of_element_located((By.ID, 'side'))   
+        )
+    
         # Clicar no ícone de anexar
-        anexar_icone = navegador.find_element(By.XPATH, "//div[@title='Anexar']")
+        #Funcional!!!
+        anexar_icone = WebDriverWait(navegador, 15).until(
+            EC.element_to_be_clickable((By.XPATH, "//div[@title='Anexar']"))
+        )
         anexar_icone.click()
+
 
         # Selecionar o input de arquivo e enviar o anexo
         anexar_documento = navegador.find_element(By.XPATH, "//input[@accept='*']")
@@ -29,13 +38,15 @@ def enviar_anexo(navegador, telefone, anexo):
 
         # Clicar no botão de enviar
         sleep(intervaloAleatorio)
-        enviar_botao = navegador.find_element(By.XPATH, "//span[@data-icon='send']")
-        enviar_botao.click()
+        botao_enviar = WebDriverWait(navegador, 15).until(
+            EC.element_to_be_clickable((By.XPATH, "//span[@data-icon='send']"))
+        )
+        botao_enviar.click()
 
         sleep(intervaloAleatorio)
         return True
 
-    except Exception as e:
+    except (NoSuchElementException, Exception) as e:
         logging.error(f"Erro ao enviar anexo para {telefone}: {e}")
         return False
 
