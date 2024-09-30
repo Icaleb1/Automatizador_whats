@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, simpledialog, messagebox
 import difflib
 import sys
+from modulos.manipularArquivos import encontrar_coluna, resetar_status_envio, adicionar_coluna_envio, verificar_numeros_enviados
 
 root = tk.Tk()
 root.withdraw()
@@ -70,3 +71,25 @@ def obter_mensagens(num_mensagens):
             sys.exit()
         mensagens.append(mensagem)
     return mensagens
+
+
+
+def reiniciar_envios(pagina_clientes, coluna_envio):
+    ja_enviados, erro = verificar_numeros_enviados(pagina_clientes, coluna_envio)
+
+    if erro:
+        messagebox.showerror('Erro', erro)
+        return
+
+    if ja_enviados:
+        resposta = messagebox.askyesno(
+            'Reinicio de envios',
+            'Já existem números enviados. Deseja resetar o status de envio?'
+        )
+        if resposta:
+            resetar_status_envio(pagina_clientes, coluna_envio)
+            messagebox.showinfo('Sucesso', 'Status de envio resetado.')
+        else:
+            messagebox.showinfo('Informação', 'O status de envio não foi alterado.')
+    else:
+        messagebox.showinfo('Informação', 'Nenhum número enviado ainda. Prosseguindo...')
