@@ -1,4 +1,5 @@
 import re
+from tkinter import messagebox
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -94,6 +95,7 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
     workbook.save(file_path)
 
     contador_mensagens = 0
+    contador_erros_consecutivos = 0
 
     for linha in pagina_clientes.iter_rows(min_row=2):
 
@@ -106,7 +108,7 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
         telefone = linha[2].value
 
         status_envio = linha[coluna_envio - 1].value 
-        if status_envio == "Sucesso" or status_envio == "Falha":
+        if status_envio == "Sucesso":
             continue 
 
         if nome is None or telefone is None:
@@ -143,9 +145,10 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
                     cell.fill = green_fill
                 workbook.save(file_path)
 
+                contador_erros_consecutivos = 0
                 contador_mensagens += 1
 
-                if contador_mensagens >= 2:
+                if contador_mensagens >= 50:
                     navegador.quit()
                     navegador = inicializar_navegador()
                     contador_mensagens = 0
@@ -158,6 +161,15 @@ def processar_clientes(navegador, mensagens, pagina_clientes, workbook, file_pat
                 for cell in linha:
                     cell.fill = red_fill
                 workbook.save(file_path)
+
+                contador_erros_consecutivos += 1  
+
+                if contador_erros_consecutivos >= 10:
+                    logging.error("Muitos erros consecutivos. O programa será encerrado.")
+                    messagebox.showinfo("Aviso","Muitos erros ocorreram. Por favor, reinicie o programa.")
+                    navegador.quit()  
+                    exit(1)  
+
     try:
         workbook.save(file_path)
     except Exception as e:

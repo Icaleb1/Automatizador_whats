@@ -1,0 +1,25 @@
+2024-09-29 21:54:19,308 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF75848B125+29573]
+	(No symbol) [0x00007FF7583FFF50]
+	(No symbol) [0x00007FF7582BB6EA]
+	(No symbol) [0x00007FF75830F815]
+	(No symbol) [0x00007FF75830FA6C]
+	(No symbol) [0x00007FF75835B917]
+	(No symbol) [0x00007FF75833733F]
+	(No symbol) [0x00007FF7583586BC]
+	(No symbol) [0x00007FF7583370A3]
+	(No symbol) [0x00007FF7583012DF]
+	(No symbol) [0x00007FF758302441]
+	GetHandleVerifier [0x00007FF7587BC76D+3377613]
+	GetHandleVerifier [0x00007FF758807B67+3685831]
+	GetHandleVerifier [0x00007FF7587FCF8B+3641835]
+	GetHandleVerifier [0x00007FF75854B2A6+816390]
+	(No symbol) [0x00007FF75840B25F]
+	(No symbol) [0x00007FF758407084]
+	(No symbol) [0x00007FF758407220]
+	(No symbol) [0x00007FF7583F607F]
+	BaseThreadInitThunk [0x00007FFC2775257D+29]
+	RtlUserThreadStart [0x00007FFC295CAF28+40]
+
