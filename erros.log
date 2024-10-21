@@ -1,0 +1,186 @@
+2024-10-18 20:18:48,354 - ERROR - Erro na função principal: expected str, bytes or os.PathLike object, not NoneType
+2024-10-18 20:20:37,751 - ERROR - Erro na função principal: expected str, bytes or os.PathLike object, not NoneType
+2024-10-18 20:23:10,980 - ERROR - Erro na função principal: expected str, bytes or os.PathLike object, not NoneType
+2024-10-18 21:00:30,538 - ERROR - Caminho do arquivo inválido: None
+2024-10-18 21:01:58,682 - ERROR - Erro na função principal, classes: <selenium.webdriver.chrome.webdriver.WebDriver (session="d84a06f2ae51a4774be38eb8fa1a1206")>/['teste']/Planilha1/<openpyxl.workbook.workbook.Workbook object at 0x0000017279FA90D0>/None/None: 'str' object has no attribute 'value'
+2024-10-18 21:08:13,565 - ERROR - Erro na função principal, classes: <selenium.webdriver.chrome.webdriver.WebDriver (session="afb76eb754afbc13259bb099daec8e3f")>/['teste']/Planilha1/<openpyxl.workbook.workbook.Workbook object at 0x0000015FE4E66090>/None/None: 'str' object has no attribute 'value'
+2024-10-18 21:09:45,120 - ERROR - Erro na função principal, classes: <selenium.webdriver.chrome.webdriver.WebDriver (session="3e09f24409df451a979b77b8dd800308")>/['teste']/Planilha1/<openpyxl.workbook.workbook.Workbook object at 0x0000015FE4E41290>/None/None: 'str' object has no attribute 'value'
+2024-10-18 21:21:00,646 - ERROR - Erro na função principal, classes: <selenium.webdriver.chrome.webdriver.WebDriver (session="be7eeca11a9c2b25960a777d36f96616")>/['teste']/Planilha1/<openpyxl.workbook.workbook.Workbook object at 0x000001AD38CD6D50>/None/None: 'str' object has no attribute 'value'
+2024-10-19 00:14:49,162 - ERROR - Erro na função principal, classes: <selenium.webdriver.chrome.webdriver.WebDriver (session="2091e3d47b17bf902869c8a4c211c571")>/['teste']/<Worksheet "Planilha1">/<openpyxl.workbook.workbook.Workbook object at 0x00000204C89B2A90>/None/None: [Errno 13] Permission denied: 'C:/Users/Caleb/Downloads/clientes(teste).xlsx'
+2024-10-19 00:23:58,721 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F378B095+29557]
+	(No symbol) [0x00007FF7F36FFA50]
+	(No symbol) [0x00007FF7F35BB56A]
+	(No symbol) [0x00007FF7F360F695]
+	(No symbol) [0x00007FF7F360F8EC]
+	(No symbol) [0x00007FF7F365B777]
+	(No symbol) [0x00007FF7F36371CF]
+	(No symbol) [0x00007FF7F365851C]
+	(No symbol) [0x00007FF7F3636F33]
+	(No symbol) [0x00007FF7F360116F]
+	(No symbol) [0x00007FF7F36022D1]
+	GetHandleVerifier [0x00007FF7F3ABC96D+3378253]
+	GetHandleVerifier [0x00007FF7F3B08497+3688311]
+	GetHandleVerifier [0x00007FF7F3AFD1CB+3642539]
+	GetHandleVerifier [0x00007FF7F384A6B6+813462]
+	(No symbol) [0x00007FF7F370AB5F]
+	(No symbol) [0x00007FF7F3706B74]
+	(No symbol) [0x00007FF7F3706D10]
+	(No symbol) [0x00007FF7F36F5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 00:27:24,682 - ERROR - Erro ao tentar fechar o navegador: '_tkinter.tkapp' object has no attribute 'paginas_combobox'
+2024-10-19 09:35:46,320 - ERROR - Erro ao tentar fechar o navegador: '_tkinter.tkapp' object has no attribute 'paginas_combobox'
+2024-10-19 09:37:56,338 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 09:39:13,647 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 09:44:42,340 - ERROR - As mensagens não foram fornecidas corretamente.
+2024-10-19 09:45:26,796 - ERROR - Erro na função principal: list index out of range
+2024-10-19 09:45:34,714 - ERROR - Erro ao tentar fechar o navegador: '_tkinter.tkapp' object has no attribute 'paginas_combobox'
+2024-10-19 09:49:13,392 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 09:49:18,004 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 09:51:26,451 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 09:51:31,998 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:13:01,809 - ERROR - As mensagens não foram fornecidas corretamente.
+2024-10-19 10:13:08,976 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:13:13,501 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:13:18,078 - ERROR - As mensagens não foram fornecidas corretamente.
+2024-10-19 10:13:25,348 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:13:30,358 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:14:29,977 - ERROR - A página da planilha de clientes não foi carregada.
+2024-10-19 10:14:40,735 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:14:44,979 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:17:20,908 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:17:25,389 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:17:31,144 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:17:36,346 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:23:48,171 - ERROR - Erro na função principal: 'Worksheet Página não selecionada does not exist.'
+2024-10-19 10:23:55,431 - ERROR - Erro ao tentar fechar o navegador: cannot access local variable 'navegador' where it is not associated with a value
+2024-10-19 10:56:34,089 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF70EC7B095+29557]
+	(No symbol) [0x00007FF70EBEFA50]
+	(No symbol) [0x00007FF70EAAB56A]
+	(No symbol) [0x00007FF70EAFF695]
+	(No symbol) [0x00007FF70EAFF8EC]
+	(No symbol) [0x00007FF70EB4B777]
+	(No symbol) [0x00007FF70EB271CF]
+	(No symbol) [0x00007FF70EB4851C]
+	(No symbol) [0x00007FF70EB26F33]
+	(No symbol) [0x00007FF70EAF116F]
+	(No symbol) [0x00007FF70EAF22D1]
+	GetHandleVerifier [0x00007FF70EFAC96D+3378253]
+	GetHandleVerifier [0x00007FF70EFF8497+3688311]
+	GetHandleVerifier [0x00007FF70EFED1CB+3642539]
+	GetHandleVerifier [0x00007FF70ED3A6B6+813462]
+	(No symbol) [0x00007FF70EBFAB5F]
+	(No symbol) [0x00007FF70EBF6B74]
+	(No symbol) [0x00007FF70EBF6D10]
+	(No symbol) [0x00007FF70EBE5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 11:05:45,250 - ERROR - Erro ao tentar fechar o navegador: '_tkinter.tkapp' object has no attribute 'paginas_combobox'
+2024-10-19 11:54:19,624 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF659B2B095+29557]
+	(No symbol) [0x00007FF659A9FA50]
+	(No symbol) [0x00007FF65995B56A]
+	(No symbol) [0x00007FF6599AF695]
+	(No symbol) [0x00007FF6599AF8EC]
+	(No symbol) [0x00007FF6599FB777]
+	(No symbol) [0x00007FF6599D71CF]
+	(No symbol) [0x00007FF6599F851C]
+	(No symbol) [0x00007FF6599D6F33]
+	(No symbol) [0x00007FF6599A116F]
+	(No symbol) [0x00007FF6599A22D1]
+	GetHandleVerifier [0x00007FF659E5C96D+3378253]
+	GetHandleVerifier [0x00007FF659EA8497+3688311]
+	GetHandleVerifier [0x00007FF659E9D1CB+3642539]
+	GetHandleVerifier [0x00007FF659BEA6B6+813462]
+	(No symbol) [0x00007FF659AAAB5F]
+	(No symbol) [0x00007FF659AA6B74]
+	(No symbol) [0x00007FF659AA6D10]
+	(No symbol) [0x00007FF659A95C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 11:54:50,926 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF659B2B095+29557]
+	(No symbol) [0x00007FF659A9FA50]
+	(No symbol) [0x00007FF65995B56A]
+	(No symbol) [0x00007FF6599AF695]
+	(No symbol) [0x00007FF6599AF8EC]
+	(No symbol) [0x00007FF6599FB777]
+	(No symbol) [0x00007FF6599D71CF]
+	(No symbol) [0x00007FF6599F851C]
+	(No symbol) [0x00007FF6599D6F33]
+	(No symbol) [0x00007FF6599A116F]
+	(No symbol) [0x00007FF6599A22D1]
+	GetHandleVerifier [0x00007FF659E5C96D+3378253]
+	GetHandleVerifier [0x00007FF659EA8497+3688311]
+	GetHandleVerifier [0x00007FF659E9D1CB+3642539]
+	GetHandleVerifier [0x00007FF659BEA6B6+813462]
+	(No symbol) [0x00007FF659AAAB5F]
+	(No symbol) [0x00007FF659AA6B74]
+	(No symbol) [0x00007FF659AA6D10]
+	(No symbol) [0x00007FF659A95C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 12:09:29,290 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF659B2B095+29557]
+	(No symbol) [0x00007FF659A9FA50]
+	(No symbol) [0x00007FF65995B56A]
+	(No symbol) [0x00007FF6599AF695]
+	(No symbol) [0x00007FF6599AF8EC]
+	(No symbol) [0x00007FF6599FB777]
+	(No symbol) [0x00007FF6599D71CF]
+	(No symbol) [0x00007FF6599F851C]
+	(No symbol) [0x00007FF6599D6F33]
+	(No symbol) [0x00007FF6599A116F]
+	(No symbol) [0x00007FF6599A22D1]
+	GetHandleVerifier [0x00007FF659E5C96D+3378253]
+	GetHandleVerifier [0x00007FF659EA8497+3688311]
+	GetHandleVerifier [0x00007FF659E9D1CB+3642539]
+	GetHandleVerifier [0x00007FF659BEA6B6+813462]
+	(No symbol) [0x00007FF659AAAB5F]
+	(No symbol) [0x00007FF659AA6B74]
+	(No symbol) [0x00007FF659AA6D10]
+	(No symbol) [0x00007FF659A95C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 12:30:36,839 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF640F8B095+29557]
+	(No symbol) [0x00007FF640EFFA50]
+	(No symbol) [0x00007FF640DBB56A]
+	(No symbol) [0x00007FF640E0F695]
+	(No symbol) [0x00007FF640E0F8EC]
+	(No symbol) [0x00007FF640E5B777]
+	(No symbol) [0x00007FF640E371CF]
+	(No symbol) [0x00007FF640E5851C]
+	(No symbol) [0x00007FF640E36F33]
+	(No symbol) [0x00007FF640E0116F]
+	(No symbol) [0x00007FF640E022D1]
+	GetHandleVerifier [0x00007FF6412BC96D+3378253]
+	GetHandleVerifier [0x00007FF641308497+3688311]
+	GetHandleVerifier [0x00007FF6412FD1CB+3642539]
+	GetHandleVerifier [0x00007FF64104A6B6+813462]
+	(No symbol) [0x00007FF640F0AB5F]
+	(No symbol) [0x00007FF640F06B74]
+	(No symbol) [0x00007FF640F06D10]
+	(No symbol) [0x00007FF640EF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+

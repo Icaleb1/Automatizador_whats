@@ -23,3 +23,128 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFC2775257D+29]
 	RtlUserThreadStart [0x00007FFC295CAF28+40]
 
+2024-10-19 23:05:56,109 - ERROR - Erro ao processar cliente CALEB (48991762810): Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.101)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78CC8B095+29557]
+	(No symbol) [0x00007FF78CBFFA50]
+	(No symbol) [0x00007FF78CABB56A]
+	(No symbol) [0x00007FF78CAA2BAC]
+	(No symbol) [0x00007FF78CAA2A70]
+	(No symbol) [0x00007FF78CABDF31]
+	(No symbol) [0x00007FF78CB57E49]
+	(No symbol) [0x00007FF78CB36F33]
+	(No symbol) [0x00007FF78CB0116F]
+	(No symbol) [0x00007FF78CB022D1]
+	GetHandleVerifier [0x00007FF78CFBC96D+3378253]
+	GetHandleVerifier [0x00007FF78D008497+3688311]
+	GetHandleVerifier [0x00007FF78CFFD1CB+3642539]
+	GetHandleVerifier [0x00007FF78CD4A6B6+813462]
+	(No symbol) [0x00007FF78CC0AB5F]
+	(No symbol) [0x00007FF78CC06B74]
+	(No symbol) [0x00007FF78CC06D10]
+	(No symbol) [0x00007FF78CBF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 23:06:01,492 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.101)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78CC8B095+29557]
+	(No symbol) [0x00007FF78CBFFA50]
+	(No symbol) [0x00007FF78CABB56A]
+	(No symbol) [0x00007FF78CAA2BAC]
+	(No symbol) [0x00007FF78CAA2A70]
+	(No symbol) [0x00007FF78CABDF31]
+	(No symbol) [0x00007FF78CB57E49]
+	(No symbol) [0x00007FF78CB36F33]
+	(No symbol) [0x00007FF78CB0116F]
+	(No symbol) [0x00007FF78CB022D1]
+	GetHandleVerifier [0x00007FF78CFBC96D+3378253]
+	GetHandleVerifier [0x00007FF78D008497+3688311]
+	GetHandleVerifier [0x00007FF78CFFD1CB+3642539]
+	GetHandleVerifier [0x00007FF78CD4A6B6+813462]
+	(No symbol) [0x00007FF78CC0AB5F]
+	(No symbol) [0x00007FF78CC06B74]
+	(No symbol) [0x00007FF78CC06D10]
+	(No symbol) [0x00007FF78CBF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 23:06:06,197 - ERROR - Erro ao processar cliente Caleb2 (48991762810): Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.101)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78CC8B095+29557]
+	(No symbol) [0x00007FF78CBFFA50]
+	(No symbol) [0x00007FF78CABB56A]
+	(No symbol) [0x00007FF78CAA2BAC]
+	(No symbol) [0x00007FF78CAA2A70]
+	(No symbol) [0x00007FF78CABDF31]
+	(No symbol) [0x00007FF78CB57E49]
+	(No symbol) [0x00007FF78CB36F33]
+	(No symbol) [0x00007FF78CB0116F]
+	(No symbol) [0x00007FF78CB022D1]
+	GetHandleVerifier [0x00007FF78CFBC96D+3378253]
+	GetHandleVerifier [0x00007FF78D008497+3688311]
+	GetHandleVerifier [0x00007FF78CFFD1CB+3642539]
+	GetHandleVerifier [0x00007FF78CD4A6B6+813462]
+	(No symbol) [0x00007FF78CC0AB5F]
+	(No symbol) [0x00007FF78CC06B74]
+	(No symbol) [0x00007FF78CC06D10]
+	(No symbol) [0x00007FF78CBF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 23:06:11,207 - ERROR - Erro ao processar cliente Caleb3 (48991762810): Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.101)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78CC8B095+29557]
+	(No symbol) [0x00007FF78CBFFA50]
+	(No symbol) [0x00007FF78CABB56A]
+	(No symbol) [0x00007FF78CAA2BAC]
+	(No symbol) [0x00007FF78CAA2A70]
+	(No symbol) [0x00007FF78CABDF31]
+	(No symbol) [0x00007FF78CB57E49]
+	(No symbol) [0x00007FF78CB36F33]
+	(No symbol) [0x00007FF78CB0116F]
+	(No symbol) [0x00007FF78CB022D1]
+	GetHandleVerifier [0x00007FF78CFBC96D+3378253]
+	GetHandleVerifier [0x00007FF78D008497+3688311]
+	GetHandleVerifier [0x00007FF78CFFD1CB+3642539]
+	GetHandleVerifier [0x00007FF78CD4A6B6+813462]
+	(No symbol) [0x00007FF78CC0AB5F]
+	(No symbol) [0x00007FF78CC06B74]
+	(No symbol) [0x00007FF78CC06D10]
+	(No symbol) [0x00007FF78CBF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+
+2024-10-19 23:10:57,463 - ERROR - Erro ao processar cliente caguei (86878768686868): Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p"}
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF66FE8B095+29557]
+	(No symbol) [0x00007FF66FDFFA50]
+	(No symbol) [0x00007FF66FCBB56A]
+	(No symbol) [0x00007FF66FD0F695]
+	(No symbol) [0x00007FF66FD0F8EC]
+	(No symbol) [0x00007FF66FD5B777]
+	(No symbol) [0x00007FF66FD371CF]
+	(No symbol) [0x00007FF66FD5851C]
+	(No symbol) [0x00007FF66FD36F33]
+	(No symbol) [0x00007FF66FD0116F]
+	(No symbol) [0x00007FF66FD022D1]
+	GetHandleVerifier [0x00007FF6701BC96D+3378253]
+	GetHandleVerifier [0x00007FF670208497+3688311]
+	GetHandleVerifier [0x00007FF6701FD1CB+3642539]
+	GetHandleVerifier [0x00007FF66FF4A6B6+813462]
+	(No symbol) [0x00007FF66FE0AB5F]
+	(No symbol) [0x00007FF66FE06B74]
+	(No symbol) [0x00007FF66FE06D10]
+	(No symbol) [0x00007FF66FDF5C1F]
+	BaseThreadInitThunk [0x00007FF92CF2257D+29]
+	RtlUserThreadStart [0x00007FF92F06AF08+40]
+

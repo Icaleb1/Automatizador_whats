@@ -72,8 +72,6 @@ def obter_mensagens(num_mensagens):
         mensagens.append(mensagem)
     return mensagens
 
-
-
 def reiniciar_envios(pagina_clientes, coluna_envio):
     ja_enviados, erro = verificar_numeros_enviados(pagina_clientes, coluna_envio)
 
@@ -93,3 +91,5 @@ def reiniciar_envios(pagina_clientes, coluna_envio):
             messagebox.showinfo('Informação', 'O status de envio não foi alterado.')
     else:
         messagebox.showinfo('Informação', 'Nenhum número enviado ainda. Prosseguindo...')
+
+
